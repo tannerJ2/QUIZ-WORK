@@ -1,5 +1,4 @@
 public class OfferedCourse extends Course{
-   //TODO: Declare private fields
    private String instructorName;
    private String location;
    private String time;
@@ -7,7 +6,8 @@ public class OfferedCourse extends Course{
 
 
    public OfferedCourse(String courseNum, String courseTitle, String instructorName, String location, String time, int creditHours) {
-      super(courseNum, courseTitle);
+      setCourseNumber(courseNumber);
+      setCourseTitle(courseTitle);
       this.instructorName = instructorName;
       this.location = location;
       this.time = time;
@@ -16,8 +16,8 @@ public class OfferedCourse extends Course{
 
 
   public void printInfo() {
-      System.out.println("Course Number: " + getCourseNumber());
-      System.out.println("Course Title: " + getCourseTitle());
+      System.out.println("Course Number: " + courseNumber);
+      System.out.println("Course Title: " + courseTitle);
       System.out.println("Instructor Name: " + instructorName);
       System.out.println("Location: " + location);
       System.out.println("Time: " + time);
@@ -30,20 +30,8 @@ public class OfferedCourse extends Course{
       printInfo();
    }
 
-   // Public method computeExpectedWorkHours
+   //computed the work hours 
    public int computeExpectedWorkHours() {
       return creditHours * getWorkPerCreditHour();
    }
 }
-
-   // TODO: Define mutator methods -
-
-   //      setInstructorName(), setLocation(), setClassTime()
-
-    // TODO: write the code for a constructor that uses this set of parameters
-    // to initialize the object data
-
-   // TODO: implement two public printInfo methods, as described in the 
-   // quiz document.
-
-   // TODO: implement computeExpectedWorkHours, as describes in the quiz document

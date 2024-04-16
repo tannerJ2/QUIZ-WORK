@@ -1,13 +1,13 @@
 public class Course {
-        private String courseNumber;
-        private String courseTitle;
+        public String courseNumber;
+        public String courseTitle;
         private int workPerCreditHour; 
      
         public Course() {
             this.workPerCreditHour = 3;
         }
     
-        // Mutator methods
+        //these are the mutator methods
         public void setCourseNumber(String courseNumber) {
             this.courseNumber = courseNumber;
         }
@@ -15,18 +15,18 @@ public class Course {
         public void setCourseTitle(String courseTitle) {
             this.courseTitle = courseTitle;
         }
-    
-        // Accessor method
+
+        //these are the accessor methods
         public int getWorkPerCreditHour() {
             return workPerCreditHour;
         }
-            // Method computeExpectedWorkHours
+        //the method for compute expected hours
         public int computeExpectedWorkHours() {
             System.out.println("ERROR: expected work hours can only be computed for offered classes");
             return -1;
         }
 
-        // Method printInfo
+        //the print info method
         public void printInfo() {
             System.out.println("Course Number: " + courseNumber);
             System.out.println("Course Title: " + courseTitle);
